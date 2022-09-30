@@ -11,19 +11,12 @@ using System.Windows.Forms;
 namespace MatchingGame
 {
     public partial class Form1 : Form
-    {
-        Random random = new Random();
-        List<string> icons = new List<string>()
-        {
-            "!", "!", "%", "%", "*", "*", "^", "^"
-            "$", "$", "@", "@", "#", "#", "(", "(" 
-        };
+    { 
         public Form1()
 
         {
             InitializeComponent();
+            
         }
-
-
     }
 }
