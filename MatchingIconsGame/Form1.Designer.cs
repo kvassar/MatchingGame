@@ -47,6 +47,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label17 = new System.Windows.Forms.Label();
+            this.stopWatch = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.startButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,29 +79,27 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 59);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(399, 409);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 446);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label16
             // 
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label16.Location = new System.Drawing.Point(301, 305);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(404, 335);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 102);
+            this.label16.Size = new System.Drawing.Size(126, 109);
             this.label16.TabIndex = 15;
             this.label16.Text = "c";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,10 +109,9 @@
             // 
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label15.Location = new System.Drawing.Point(202, 305);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(271, 335);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 102);
+            this.label15.Size = new System.Drawing.Size(125, 109);
             this.label15.TabIndex = 14;
             this.label15.Text = "c";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -120,10 +121,9 @@
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label14.Location = new System.Drawing.Point(103, 305);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(138, 335);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 102);
+            this.label14.Size = new System.Drawing.Size(125, 109);
             this.label14.TabIndex = 13;
             this.label14.Text = "c";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,10 +133,9 @@
             // 
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label13.Location = new System.Drawing.Point(4, 305);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(5, 335);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 102);
+            this.label13.Size = new System.Drawing.Size(125, 109);
             this.label13.TabIndex = 12;
             this.label13.Text = "c";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,10 +145,9 @@
             // 
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label12.Location = new System.Drawing.Point(301, 204);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(404, 224);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 99);
+            this.label12.Size = new System.Drawing.Size(126, 109);
             this.label12.TabIndex = 11;
             this.label12.Text = "c";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,10 +157,9 @@
             // 
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label11.Location = new System.Drawing.Point(202, 204);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(271, 224);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 99);
+            this.label11.Size = new System.Drawing.Size(125, 109);
             this.label11.TabIndex = 10;
             this.label11.Text = "c";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,10 +169,9 @@
             // 
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label10.Location = new System.Drawing.Point(103, 204);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(138, 224);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 99);
+            this.label10.Size = new System.Drawing.Size(125, 109);
             this.label10.TabIndex = 9;
             this.label10.Text = "c";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,10 +181,9 @@
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label9.Location = new System.Drawing.Point(4, 204);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(5, 224);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 99);
+            this.label9.Size = new System.Drawing.Size(125, 109);
             this.label9.TabIndex = 8;
             this.label9.Text = "c";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,10 +193,9 @@
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label8.Location = new System.Drawing.Point(301, 103);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(404, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 99);
+            this.label8.Size = new System.Drawing.Size(126, 109);
             this.label8.TabIndex = 7;
             this.label8.Text = "c";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,10 +205,9 @@
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label7.Location = new System.Drawing.Point(202, 103);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(271, 113);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 99);
+            this.label7.Size = new System.Drawing.Size(125, 109);
             this.label7.TabIndex = 6;
             this.label7.Text = "c";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,10 +217,9 @@
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label6.Location = new System.Drawing.Point(103, 103);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(138, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 99);
+            this.label6.Size = new System.Drawing.Size(125, 109);
             this.label6.TabIndex = 5;
             this.label6.Text = "c";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,10 +229,9 @@
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label5.Location = new System.Drawing.Point(4, 103);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(5, 113);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 99);
+            this.label5.Size = new System.Drawing.Size(125, 109);
             this.label5.TabIndex = 4;
             this.label5.Text = "c";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,10 +241,9 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label4.Location = new System.Drawing.Point(301, 2);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(404, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 99);
+            this.label4.Size = new System.Drawing.Size(126, 109);
             this.label4.TabIndex = 3;
             this.label4.Text = "c";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,10 +253,9 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label3.Location = new System.Drawing.Point(202, 2);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(271, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 99);
+            this.label3.Size = new System.Drawing.Size(125, 109);
             this.label3.TabIndex = 2;
             this.label3.Text = "c";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,10 +265,9 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label2.Location = new System.Drawing.Point(103, 2);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(138, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 99);
+            this.label2.Size = new System.Drawing.Size(125, 109);
             this.label2.TabIndex = 1;
             this.label2.Text = "c";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,10 +277,9 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.Location = new System.Drawing.Point(4, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(5, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 99);
+            this.label1.Size = new System.Drawing.Size(125, 109);
             this.label1.TabIndex = 0;
             this.label1.Text = "c";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,14 +290,57 @@
             this.timer1.Interval = 750;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(196, 9);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(174, 41);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Elapsed Time ";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // stopWatch
+            // 
+            this.stopWatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stopWatch.ForeColor = System.Drawing.Color.White;
+            this.stopWatch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stopWatch.Location = new System.Drawing.Point(389, 10);
+            this.stopWatch.Name = "stopWatch";
+            this.stopWatch.Size = new System.Drawing.Size(131, 40);
+            this.stopWatch.TabIndex = 2;
+            this.stopWatch.Text = "0";
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // startButton
+            // 
+            this.startButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.Location = new System.Drawing.Point(12, 5);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(118, 49);
+            this.startButton.TabIndex = 3;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(399, 409);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(532, 503);
+            this.Controls.Add(this.startButton);
+            this.Controls.Add(this.stopWatch);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Matching Game ";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -339,6 +369,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label stopWatch;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button startButton;
     }
 }
 

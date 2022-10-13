@@ -23,6 +23,9 @@ namespace MatchingIconsGame
             "b", "b", "v", "v", "w", "w","z","z"
         };
 
+        int clock;
+        string elepsedTime;
+
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +55,9 @@ namespace MatchingIconsGame
         
         private void Label_click(object sender, EventArgs e)
         {
+           
+            
+           
             if (timer1.Enabled == true)
             {
                 return;
@@ -76,6 +82,7 @@ namespace MatchingIconsGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
                 checkForWinner();
+               
                 if (firstClicked.Text == secondClicked.Text)
                 {
                     firstClicked = null;
@@ -83,11 +90,7 @@ namespace MatchingIconsGame
 
                     return;
                 }
-                
-                timer1.Start();
-                
-
-
+                 timer1.Start();
             }
         }
 
@@ -112,10 +115,27 @@ namespace MatchingIconsGame
                         return;
                 }
             }
-
-            MessageBox.Show("You matched all the icons!", "Congratulations and well done! ");
+            timer2.Stop();
+            MessageBox.Show("You matched all the icons!", "Congratulations and well done!");
                 Close();
         }
-        
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (clock != 0)
+            {
+                clock += 1;
+                stopWatch.Text = clock + " Sec";
+                elepsedTime = stopWatch.Text;
+            }
+            
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            clock = 1;
+            stopWatch.Text = "0 Sec";
+            timer2.Start();
+        }
     }
 }
