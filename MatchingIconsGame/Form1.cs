@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MatchingIconsGame
@@ -52,12 +46,9 @@ namespace MatchingIconsGame
                 }
             }
         }
-        
+
         private void Label_click(object sender, EventArgs e)
         {
-           
-            
-           
             if (timer1.Enabled == true)
             {
                 return;
@@ -85,9 +76,16 @@ namespace MatchingIconsGame
                
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    Random rnd = new Random();
+                    int num = rnd.Next(10);
+                    int num2 = rnd.Next(10);
+                    int num3 = rnd.Next(10);
+                    int num4 = rnd.Next(10);
+                    firstClicked.BackColor = Color.FromArgb(num,num2,num2,num4);
+                    secondClicked.BackColor = Color.FromArgb(((Color)firstClicked.BackColor).ToArgb());
                     firstClicked = null;
                     secondClicked = null;
-
+                   
                     return;
                 }
                  timer1.Start();
