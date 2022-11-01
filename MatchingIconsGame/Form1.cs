@@ -27,10 +27,6 @@ namespace MatchingIconsGame
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
         private void AssignIconsToSquares()
         {
             foreach(Control control in tableLayoutPanel1.Controls)
@@ -49,46 +45,56 @@ namespace MatchingIconsGame
 
         private void Label_click(object sender, EventArgs e)
         {
-            if (timer1.Enabled == true)
+            // checks if the timer that shows the elapesed time is started
+            if (timer2.Enabled == true)
             {
-                return;
-            }
-
-            Label clickedLabel = sender as Label;
-
-            if (clickedLabel != null)
-            {
-                if (clickedLabel.ForeColor == Color.Black)
-                    return;
-                //clickedLabel.ForeColor = Color.Black;
-
-                if(firstClicked == null)
+                // checks if this is the second click by making sure that timer1 is not started already.
+                if (timer1.Enabled == true)
                 {
-
-                    firstClicked = clickedLabel;
-                    firstClicked.ForeColor = Color.Black;
-
                     return;
                 }
-                secondClicked = clickedLabel;
-                secondClicked.ForeColor = Color.Black;
-                checkForWinner();
-               
-                if (firstClicked.Text == secondClicked.Text)
+                // What is the clickedLabel
+                // This will only run if it is the first click
+                Label clickedLabel = sender as Label;
+
+                if (clickedLabel != null)
                 {
-                    Random rnd = new Random();
-                    int num = rnd.Next(10);
-                    int num2 = rnd.Next(10);
-                    int num3 = rnd.Next(10);
-                    int num4 = rnd.Next(10);
-                    firstClicked.BackColor = Color.FromArgb(num,num2,num2,num4);
-                    secondClicked.BackColor = Color.FromArgb(((Color)firstClicked.BackColor).ToArgb());
-                    firstClicked = null;
-                    secondClicked = null;
-                   
-                    return;
+                    if (clickedLabel.ForeColor == Color.Black)
+                        return;
+                    // because firstclicked does no have a value it will assign firstclick a value and set the for color to black so you can see the icon 
+                    if (firstClicked == null)
+                    {
+
+                        firstClicked = clickedLabel;
+                        firstClicked.ForeColor = Color.Black;
+
+                        return;
+                    }
+                    // This only runs if it is the second click.
+                    // reveals the icon and checks if you have matched all of the icons
+                    secondClicked = clickedLabel;
+                    secondClicked.ForeColor = Color.Black;
+                    checkForWinner();
+                    /* checks if the text matches on the clicked boxes if they do the back color randomly changes to the same color for both.
+                     * The first clicked and second clicked variables values are both set back to null.
+                     */
+                    if (firstClicked.Text == secondClicked.Text)
+                    {
+                        Random rnd = new Random();
+                        int num = rnd.Next(255);
+                        int num2 = rnd.Next(255);
+                        int num3 = rnd.Next(255);
+                        int num4 = rnd.Next(255);
+                        firstClicked.BackColor = Color.FromArgb(num, num2, num3, num4);
+                        secondClicked.BackColor = Color.FromArgb(((Color)firstClicked.BackColor).ToArgb());
+                        firstClicked = null;
+                        secondClicked = null;
+
+                        return;
+                    }
+                    // will run if it is the first click
+                    timer1.Start();
                 }
-                 timer1.Start();
             }
         }
 
@@ -120,6 +126,7 @@ namespace MatchingIconsGame
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            // If the start button is clicked than the timer will start
             if (clock != 0)
             {
                 clock += 1;
