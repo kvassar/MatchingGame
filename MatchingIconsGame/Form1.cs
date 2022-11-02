@@ -7,26 +7,26 @@ namespace MatchingIconsGame
 {
     public partial class Form1 : Form
     {
+        // variables will be used to keep track if the users guess is the first or second.
         Label firstClicked = null;
         Label secondClicked = null;
-
+        // Variable will be used to keep track of the seconds that have passed.
+        int clock;
+        // New list of possiable character that will be on the diffrent "cards". Because I am using the Webdings font the character turn into diffrent icons.
         Random random = new Random();
         List<string> icons = new List<string>()
         {
             "!", "!", "N", "N",",", ",", "k", "k",
             "b", "b", "v", "v", "w", "w","z","z"
         };
-
-        int clock;
-        string elepsedTime;
-
+        // initialize project and than givs each spot on the table the "cards" an icon using the assignIconsToSquares method.
         public Form1()
         {
             InitializeComponent();
             AssignIconsToSquares();
             
         }
-
+        // Assigns an icon to every spot on the tableLayoutPanel or "cards"
         private void AssignIconsToSquares()
         {
             foreach(Control control in tableLayoutPanel1.Controls)
@@ -92,14 +92,16 @@ namespace MatchingIconsGame
 
                         return;
                     }
-                    // will run if it is the first click
+                    // will run if it is the second click and the two revealed icons do not match.
                     timer1.Start();
                 }
             }
         }
-
+        // Stops the timer and sets the two mismatched icons so that they are hidden.
+        // It also resets the values of firstclicked and secondclicked to null so the user can click two new spots. 
         private void timer1_Tick(object sender, EventArgs e)
         {
+           
             timer1.Stop();
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
@@ -107,8 +109,10 @@ namespace MatchingIconsGame
             secondClicked = null;
 
         }
+        // looks at every spot in the table and makes sure that the iconLabel has a value and that the icon is not the same as the back color
+        // If these two restrictions are satisfide it will end the elapsed timer and a message box will tell the user that they have won.
         private void checkForWinner()
-        {
+        { 
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 Label iconLabel = control as Label;
@@ -123,10 +127,10 @@ namespace MatchingIconsGame
             MessageBox.Show("You matched all the icons!", "Congratulations and well done!");
                 Close();
         }
-
+        // If the start button is clicked than the timer will start
         private void timer2_Tick(object sender, EventArgs e)
         {
-            // If the start button is clicked than the timer will start
+            string elepsedTime;
             if (clock != 0)
             {
                 clock += 1;
@@ -135,7 +139,7 @@ namespace MatchingIconsGame
             }
             
         }
-
+        // sets the clock variable to one when the button is clicked.
         private void startButton_Click(object sender, EventArgs e)
         {
             clock = 1;
